@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultor Virtual - Paleta Engenharia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('public/bg.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .login-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 200px;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Consultor Virtual<br>Paleta Engenharia</h1>
+    <input type="text" id="login" placeholder="Usuário"><br>
+    <input type="password" id="senha" placeholder="Senha"><br>
+    <button onclick="verificarLogin()">Entrar</button>
+    <div id="mensagem" class="error"></div>
+  </div>
+
+  <script>
+    function verificarLogin() {
+      const usuario = document.getElementById("login").value;
+      const senha = document.getElementById("senha").value;
+
+      if (usuario === "paletaengenharia" && senha === "paleta1234") {
+        window.location.href = "https://www.chatbase.co/chatbot-iframe/McEpVoTBSG_gEgPLEmPuB";
+      } else {
+        document.getElementById("mensagem").textContent = "Usuário ou senha incorretos.";
+      }
+    }
+  </script>
+</body>
+</html>
 
